@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="assembla" default="all">
+  
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="128m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/.pyc/**"/>
+    <exclude name="**/.pyo/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/*.lib/**"/>
+    <exclude name="**/*~/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.zip"/>
+    <include name="*.war"/>
+    <include name="*.egg"/>
+    <include name="*.ear"/>
+    <include name="*.swc"/>
+    <include name="*.jar"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <include name="**/?*.properties"/>
+    <include name="**/?*.xml"/>
+    <include name="**/?*.gif"/>
+    <include name="**/?*.png"/>
+    <include name="**/?*.jpeg"/>
+    <include name="**/?*.jpg"/>
+    <include name="**/?*.html"/>
+    <include name="**/?*.dtd"/>
+    <include name="**/?*.tld"/>
+    <include name="**/?*.ftl"/>
+  </patternset>
+  
+  
+  <!-- Global Libraries -->
+  
+  
+  <!-- Application Server Libraries -->
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module global -->
+  
+  <dirname property="module.global.basedir" file="${ant.file}"/>
+  
+  
+  
+  <property name="compiler.args.global" value="${compiler.args}"/>
+  
+  <property name="global.output.dir" value="${module.global.basedir}/out/production/global"/>
+  <property name="global.testoutput.dir" value="${module.global.basedir}/out/test/global"/>
+  
+  <path id="global.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="global.module.production.classpath">
+    <pathelement location="${basedir}/lib/guava-13.0.1.jar"/>
+  </path>
+  
+  <path id="global.runtime.production.module.classpath">
+    <pathelement location="${global.output.dir}"/>
+    <pathelement location="${basedir}/lib/guava-13.0.1.jar"/>
+  </path>
+  
+  <path id="global.module.classpath">
+    <pathelement location="${global.output.dir}"/>
+    <pathelement location="${basedir}/lib/guava-13.0.1.jar"/>
+  </path>
+  
+  <path id="global.runtime.module.classpath">
+    <pathelement location="${global.testoutput.dir}"/>
+    <pathelement location="${global.output.dir}"/>
+    <pathelement location="${basedir}/lib/guava-13.0.1.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.global">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.global">
+    <patternset refid="excluded.from.module.global"/>
+  </patternset>
+  
+  <path id="global.module.sourcepath">
+    <dirset dir="${module.global.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.global" depends="compile.module.global.production,compile.module.global.tests" description="Compile module global"/>
+  
+  <target name="compile.module.global.production" description="Compile module global; production classes">
+    <mkdir dir="${global.output.dir}"/>
+    <javac destdir="${global.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
+      <compilerarg line="${compiler.args.global}"/>
+      <bootclasspath refid="global.module.bootclasspath"/>
+      <classpath refid="global.module.production.classpath"/>
+      <src refid="global.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.global"/>
+    </javac>
+    
+    <copy todir="${global.output.dir}">
+      <fileset dir="${module.global.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.global.tests" depends="compile.module.global.production" description="compile module global; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.global" description="cleanup module">
+    <delete dir="${global.output.dir}"/>
+    <delete dir="${global.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.global" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.global" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.hackathon.jar" value="${basedir}/out/artifacts"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.hackathon.jar" value="${artifacts.temp.dir}/hackathon.jar"/>
+  </target>
+  
+  <target name="artifact.hackathon.jar" depends="init.artifacts, compile.module.global" description="Build &apos;hackathon.jar&apos; artifact">
+    <property name="artifact.temp.output.hackathon.jar" value="${artifacts.temp.dir}/hackathon_jar"/>
+    <mkdir dir="${artifact.temp.output.hackathon.jar}"/>
+    <jar destfile="${temp.jar.path.hackathon.jar}" duplicate="preserve">
+      <manifest>
+        <attribute name="Main-Class" value="com.kaggle.acm.hackathon.hackathon.Main"/>
+      </manifest>
+      <zipfileset dir="${global.output.dir}"/>
+      <zipfileset src="${basedir}/lib/guava-13.0.1.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.hackathon.jar}" tofile="${artifact.temp.output.hackathon.jar}/hackathon.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.hackathon.jar" description="Build all artifacts">
+    <mkdir dir="${artifact.output.hackathon.jar}"/>
+    <copy todir="${artifact.output.hackathon.jar}">
+      <fileset dir="${artifact.temp.output.hackathon.jar}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
