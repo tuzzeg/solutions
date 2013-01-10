@@ -1,0 +1,158 @@
+features:
+ uncommon words?,
+ quotes?
+ one-letter variations,
+named entity,
+any word twice?
+
+
+
+ss50 0.899289015735
+{'logr__C': 0.015625, 'vect__char_range': (1, 4), 'vect__word_range': (1, 2)}
+0.896956114795
+{'logr__C': 0.01, 'vect__char_range': (1, 5), 'vect__word_range': (1, 3)}
+
+ss5 0.904839161565
+{'logr__C': 0.015625, 'vect__char_range': (1, 5), 'vect__word_range': (1, 3)}
+
+min_df=2
+ss50 0.897950956364 +-0.01042787
+{'logr__C': 0.01, 'vect__char_range': (1, 5), 'vect__word_range': (1, 3)}
+
+min_df=1
+ss50 0.899167675844 +-0.00996715
+{'logr__C': 0.015625, 'vect__char_range': (1, 5), 'vect__word_range': (1, 2)}
+
+min_df=1 nochar
+0.889458659739
+{'logr__C': 1.0, 'vect__word_range': (1, 2)}
+
+min_df=2 nochar
+0.889937560119
+{'logr__C': 0.5, 'vect__word_range': (1, 3)}
+
+only designed ss20:
+0.754171776832
+{'logr__C': 0.125}
+
+just words ss20, mindf2
+0.881163938504
+{'logr__C': 0.25, 'vect__word_range': (1, 3)}
+
+no words: ss10
+0.906459334679
+{'logr__C': 4.0, 'vect__char_range': (1, 4)}
+
+no words: ss20
+0.906488000861
+{'logr__C': 4, 'vect__char_range': (1, 4)}
+
+no words, more params, ss10
+0.907882622299
+{'logr__C': 6, 'vect__char_range': (1, 5)}
+
+no words, more params, ss20
+0.904469490972
+{'logr__C': 9, 'vect__char_range': (1, 5)}
+
+no words, classif selection
+0.909000343987
+{'logr__C': 9, 'select__percentile': 30, 'vect__word_range': (1, 3), 'vect__char_range': (1, 5)}
+
+no words, chi2 selection
+0.909025637541
+{'logr__C': 16.0, 'select__percentile': 30, 'vect__word_range': (1, 3), 'vect__char_range': (1, 5)}
+
+no words, chi2 selection
+0.910659667085
+{'logr__C': 13, 'select__percentile': 10, 'vect__word_range': (1, 3), 'vect__char_range': (1, 5)}
+
+0.910878313902
+{'logr__C': 20, 'select__percentile': 7, 'vect__word_range': (1, 3), 'vect__char_range': (1, 5)}
+
+precompute features, ss50: coarse selction :-/ throw away
+0.907881815965
+{'logr__C': 16.0, 'select__percentile': 6}
+
+0.911123747335
+{'logr__C': 15, 'select__percentile': 8}
+0.911813319384
+{'logr__C': 15, 'select__percentile': 11}
+
+ss 50:
+0.910450058337
+{'logr__C': 12, 'select__percentile': 9}
+
+
+
+feature selection on words + chars, chi2:
+0.912640914406
+{'logr__C': 4.0, 'select__percentile': 16, 'vect__word_range': (1, 3), 'vect__char_range': (1, 5)}
+
+0.913432113519
+{'logr__C': 8, 'select__percentile': 15}
+
+with updated badwords:
+0.915528921865
+{'logr__C': 14, 'select__percentile': 15
+
+with counting bad words:
+0.91333840187
+{'logr__C': 9, 'select__percentile': 13}
+
+ss20 binary=False, words + char
+0.911491117421
+{'logr__C': 6, 'select__percentile': 7}
+
+0.913358142081
+{'logr__C': 4.0, 'select__percentile': 15}
+
+0.914403292468
+{'logr__C': 5, 'select__percentile': 8}
+
+
+ss 20, tfidf, binary=False, no scaling of designed features
+0.912261756081
+{'logr__C': 7, 'select__percentile': 2}
+
+with scaling of features:
+0.912951813566
+{'logr__C': 3, 'select__percentile': 10}
+
+
+l1 select: ss5
+char+words+designed, (1, 5), (1, 3)
+0.897332385116
+{'logr__C': 4.0, 'select__C': 8.0}
+
+no select ss50:
+0.903399470341
+{'logr__C': 5}
+
+min_df ss10
+0.917669556837
+{'logr__C': 2, 'select__percentile': 14, 'vect__words__min_df': 3}
+
+ss10 new feature extraction. only words 
+0.893394841981
+{'C': 4}
+ne features, only words and stuff
+0.903229621733
+{'select__percentile': 16}
+
+
+elasticnet: no select
+0.906497374319
+{'logr__alpha': 0.0001220703125, 'logr__rho': 0.8, 'logr__n_iter': 5}
+0.912700394265
+{'logr__alpha': 0.0001, 'logr__rho': 1, 'logr__n_iter': 11}
+0.912545571475
+{'logr__alpha': 0.0001, 'logr__rho': 0.94999999999999996, 'logr__n_iter': 21}
+
+select percentile
+0.914085740028
+{'logr__alpha': 6.103515625e-05, 'select__percentile': 11}
+
+
+
+

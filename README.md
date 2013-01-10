@@ -1,4 +1,4 @@
-solutions
+Solutions
 =========
 
 Solutions for ML competetions

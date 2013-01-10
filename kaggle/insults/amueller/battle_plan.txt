@@ -1,0 +1,4 @@
+test handcrafted features
+
+try out on test set
+cross-validate

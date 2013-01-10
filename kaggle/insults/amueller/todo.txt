@@ -1,0 +1,26 @@
+jellyfish features
+pca / kmeans features
+stemmer
+
+
+feature: ratio of punctuation characters!
+
+
+more regexp?
+
+5 final submissions:
+1) words, chars,  chi2 univariate selection
+2) chars,  chi2 univariate selection
+3) separate selection
+4) new feature selection
+5) combination of others
+
+
+====================================
+trees
+look at training set mistakes, regularization influence
+
+stemming!!
+kmeans!!
+cross-val chi320 selection for nltk_model!
+kfold vs shuffle split
