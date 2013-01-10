@@ -30,7 +30,7 @@ When comparing the test data queries with the tables generated from the product 
 
 For word matching I compare the words withing a query to the words in my word table.  If a word is not found, I use a combination of several word similarity algorithms (Levensthein, cosine, Jaccard, euclid, jarowinkler,soundex, figuring that combining their scores would smooth out each one's weaknesses) to come up wih a sim score and select the best match.  Once this is done, I add the sku rows for all the words.  I also pull the rows from the word per day tables and use a week's worth of data (3 days before, current day, 3 days after) and apply a gaussian to weight the current day the most and farther days less.  
 
-## Adding results
+### Adding results
 
 I've found that combining the scores from the query matching and word matching provides a much better result than using either single one. Each method has its own strengths and weaknesses but combined works well.  I also combine data using the customer's history and similar items (though I weight this much lower than the query and word scores because it is not very reliable). In addition, I add in any other queries that were made within the last day by the customer from the test set to handle situations where a customer is looking for multiple items and doesn't necessarily buy them in the order they were queried.
 
@@ -112,17 +112,11 @@ Zip archive, containing code (partially javadoced) with readme file is attached.
 Score: 0.77417
 
 1. Divided all data into 15-day time periods based on query_time field
-
 2. Defined a similarity measure for query strings
-
 3. Selected top 5 SKUs ordered by:
-
   a. Similarity of queries
-
   b. Time period distance
-
   c. Popularity of SKU
-
 4. Used this good observation:
 
 "Generally, for each query, users select SKUs which didn't try before for same queries"
