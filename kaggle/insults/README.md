@@ -1,13 +1,13 @@
 # Detecting Insults in Social Commentary
 
-[https://www.kaggle.com/c/detecting-insults-in-social-commentary](Kaggle competetion page)
+[Kaggle competetion page](https://www.kaggle.com/c/detecting-insults-in-social-commentary)
 
 ## Solutions:
-- cbrew, 4th place [https://github.com/cbrew/Insults](code)
-- amueller, 6th place [https://github.com/amueller/kaggle_insults/](code) [http://peekaboo-vision.blogspot.de/2012/09/recap-of-my-first-kaggle-competition.html](blog post)
+- cbrew, 4th place [code](https://github.com/cbrew/Insults)
+- amueller, 6th place [code](https://github.com/amueller/kaggle_insults/) [blog post](http://peekaboo-vision.blogspot.de/2012/09/recap-of-my-first-kaggle-competition.html)
 
 
-## [https://www.kaggle.com/c/detecting-insults-in-social-commentary/forums/t/2744](Comments):
+## [Comments](https://www.kaggle.com/c/detecting-insults-in-social-commentary/forums/t/2744)
 
 cbrew:
 > My code is really simple, probably simpler than yours, and came fourth. I completely agree that the final test dataset was so small that there is likely an element of luck in who placed where between (at least) 3 and 10.
