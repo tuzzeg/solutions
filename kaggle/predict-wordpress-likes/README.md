@@ -4,6 +4,8 @@
 
 # Carter S, 1st
 
+[Blog post](http://www.overkillanalytics.net/kaggles-wordpress-challenge-the-like-graph/)
+
 # Olexandr Topchylo, 2nd
 
 # student2012, 3rd
