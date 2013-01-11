@@ -1,0 +1,21 @@
+Written by Guocong Song
+for Data Mining Hackathon on BIG DATA (7GB) Best Buy mobile web site
+at https://www.kaggle.com/c/acm-sf-chapter-hackathon-big
+
+redis is required for DB operations.
+
+train.csv and test.csv should be located at bestbuy/data-big/
+
+To train, run python train_redis.py
+
+To make a submission file, run python make_submit.py
+
+RAM requirement: train_redis.py will make a redis DB of 400MB. A linux
+computer with 2G RAM should be able to run the code. 
+
+Run time: for a Q9400 cpu @3GHz,
+train_redis takes 10min.
+make_submit takes 45min at the first run. After that, it only takes 11min
+since the query-matching results are cached.
+
+score: 0.5997 for private one, which would take the first place.
