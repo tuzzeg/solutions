@@ -1,0 +1,18 @@
+-- REQUIRED EDITS TO ORIGINAL TARBALL
+
+	-- Change names of files in "jsonfiles.py" for kaggle-stats-user and kaggle-stats-blog
+	-- Change hardcoded dates in "f2_dev_stim_resp" from datetime(2012, 4, 23) to datetime(2012, 8, 6)
+	-- Change hardcoded dates in "f3_prod_stim_resp" from datetime(2012, 4, 30) to datetime(2012, 8, 13)
+	-- Change in "datafunc.r" to reflect different testUsers file format and name, as follows: 
+		-- FROM: test_users <- read.table("./sourcedata/test.csv, header = TRUE, col.names = "user_id")
+		-- TO: test_users <- read.table("./sourcedata/testUsers.json, header = FALSE, col.names = "user_id")
+	-- Change in "datafunc.r" to add fixed seed to randomForest model generation
+		-- ADDED: line "set.seed(898983)" to function model.fit, immediately prior to randomForest call.
+	-- Change in "build_data.sh"
+		-- Correct spelling of f7_language.py
+		-- Added sudo to all 'tee' calls due to messed up permissions on my EC2 instance
+	-- Move file into tarball from NTLK corpora directory:
+		-- moved table.txt from [NTLK]/corpora/lankid to [wp_deploy_root]/language_data
+
+
+

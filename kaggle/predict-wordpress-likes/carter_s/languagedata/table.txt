@@ -1,0 +1,449 @@
+ab	abk	Abkhaz
+abn	abn	Abua
+ace	ace	Aceh
+ach	ach	Acholi
+acu	acu	Achuar-Shiwiar
+ada	ada	Dangme
+af	afr	Afrikaans
+agr	agr	Aguaruna
+aja	aja	Aja
+ak	aka	Akan
+ako	ako	Akurio
+alt	alt	Southern Altai
+amc	amc	Amahuaca
+ame	ame	Yanesha'
+am	amh	Amharic
+ami	ami	Amis
+amr	amr	Amarakaeri
+an	arg	Aragonese
+ang	ang	Anglo-Saxon
+ar	arb	Arabic
+arl	arl	Arabela
+arn	arn	Mapudungun
+as	asm	Assamese
+ast	ast	Asturian
+av	ava	Avar
+ay	ayr	Aymara
+az	azj	Azerbaijani
+ba	bak	Bashkir
+bal	bcc	Balochi
+ban	ban	Bali
+bar	bar	Bavarian
+bas	bas	Basaa
+bba	bba	Bariba
+bci	bci	Baoulé
+be	bel	Belarusan
+bem	bem	Bemba
+bfa	bfa	Bari
+bg	bul	Bulgarian
+bh	bho	Bhojpuri
+bi	bis	Bislama
+bik	bcl	Bicolano
+bin	bin	Edo
+bm	bam	Bamanankan
+bn	ben	Bengali
+boa	boa	Bora
+bo	bod	Tibetan
+br	bre	Breton
+bs	bos	Bosnian
+btb	btb	Beti
+bua	bxr	Buriat
+buc	buc	Bushi
+bug	bug	Bugis
+bum	bum	Bulu
+byv	byv	Medumba
+cab	cab	Garífuna
+ca	cat	Catalan
+cak	cak	Cakchiquel
+cbr	cbr	Cashibo-Cacataibo
+cbs	cbs	Cashinahua
+cbt	cbt	Chayahuita
+cbu	cbu	Candoshi-Shapra
+ceb	ceb	Cebuano
+ch	cha	Chamorro
+chj	chj	Ojitlán Chinanteco
+chk	chk	Chuukese
+chw	chw	Chuwabu
+cic	cic	Chickasaw
+cjk	cjk	Chokwe
+cnh	cnh	Haka Chin
+cni	cni	Asháninca
+co	cos	Corsican
+cop	cop	Coptic
+cot	cot	Caquinte
+cpu	cpu	Ashéninca Pichis
+cr	crk	Cree
+crs	crs	Seychelles Creole
+csa	csa	Chinanteco
+csb	csb	Kashubian
+cs	ces	Czech
+cu	chu	Old Church Slavonic
+cuk	cuk	Kuna
+cv	chv	Chuvash
+cy	cym	Welsh
+czt	czt	Zotung Chin
+da	dan	Danish
+dag	dag	Dagbani
+dar	dar	Dargwa
+ddn	ddn	Dendi
+de	deu	German
+dga	dga	Dagaare
+dhv	dhv	Dehu
+diq	diq	Dimli
+dsb	dsb	Lower Sorbian
+dua	dua	Duala
+dyo	dyo	Jola-Fogny
+dyu	dyu	Jula
+dz	dzo	Dzongkha
+ee	ewe	Ewe
+efi	efi	Efik
+el	ell	Greek
+emk	emk	Kankan Maninka
+eml	eml	Emiliano-Romagnolo
+en	eng	English
+enz	eng 	English (South Africa)
+eo	epo	Esperanto
+es	spa	Spanish
+et	est	Estonian
+eu	eus	Basque
+fa	pes	Western Farsi
+ff	fub	Fulfulde
+fi	fin	Finnish
+fj	fij	Fijian
+fo	fao	Faroese
+fon	fon	Fon-Gbe
+fr	fra	French
+frf	frr	Northern Frisian (Frasch)
+frp	frp	Franco-Provençal
+frr	frr	Northern Frisian (Öömrang)
+fud	fud	East Futuna
+fuf	fuf	Pular
+fur	fur	Friulian
+fy	fri	Frisian
+gaa	gaa	Ga
+ga	gle	Irish
+gag	gag	Gagauz
+gba	gya	Gbaya
+gd	gla	Scottish Gaelic
+gil	gil	Kiribati
+gjn	gjn	Gonja
+gkn	gkn	Gokana
+gl	glg	Galician
+gn	gug	Guarani
+got	got	Gothic
+gsc	gsc	Gascon
+gsw	gsw	Alemannisch
+guc	guc	Wayuu
+gu	guj	Gujarati
+guw	guw	Gun-Gbe
+gv	glv	Manx Gaelic
+gym	gym	Ngäbere
+ha	hau	Hausa
+haw	haw	Hawaiian
+he	heb	Hebrew
+hi	hin	Hindi
+hil	hil	Hiligaynon
+hna	hna	Mina
+hne	hne	Chhattisgarhi
+hni	hni	Hani
+ho	hmo	Hiri Motu
+hr	hrv	Croatian
+hsb	hsb	Upper Sorbian
+ht	hat	Haitian Creole
+hu	hun	Hungarian
+huu	huu	Murui Huitoto
+hve	hve	Huave
+hy	hye	Armenian
+hz	her	Herero
+ia	ina	Interlingua
+iba	iba	Iban
+id	ind	Indonesian
+ig	ibo	Igbo
+igl	igl	Igala
+ilo	ilo	Ilocano
+inh	inh	Ingush
+is	isl	Icelandic
+iso	iso	Isoko
+it	ita	Italian
+its	its	Isekiri
+iu	ike	Inuktitut
+ivv	ivv	Ivatan
+jiv	jiv	Shuar
+jv	jav	Javanese
+kab	kab	Kabyle
+kac	kac	Jingpho
+ka	kat	Georgian
+kam	kam	Kamba
+kbd	kbd	Kabardian
+kbp	kbp	Kabiyé
+kcc	kcc	Lubila
+kck	kck	Kalanga
+kde	kde	Makonde
+kek	kek	Kekchi
+kg	kng	Koongo
+kha	kha	Khasi
+ki	kik	Gikuyu
+kj	kua	Kwanyama
+kjh	kjh	Khakas
+kk	kaz	Kazakh
+kl	kal	Kalaallisut
+kmb	kmb	Kimbundu
+km	khm	Khmer
+kn	kan	Kannada
+kok	knn	Konkani
+koo	koo	Konjo
+kos	kos	Kosraean
+kpe	gkp	Kpelle
+kqn	kqn	Kaonde
+krc	krc	Karachay-Balkar
+kr	knc	Kanuri
+kri	kri	Krio
+ksh	ksh	Kölsch
+ktu	ktu	Kituba
+ku	kmr	Kurdi
+kum	kum	Kumyk
+kv	kpv	Komi
+kwf	kwf	Kwara'ae
+kwk	cor	Common Cornish
+kwm	cor	Modern Cornish
+kwn	kwn	Kwangali
+kwu	cor	Unified Cornish
+ky	kir	Kirghiz
+lad	lad	Ladino
+la	lat	Latin
+lbe	lbe	Lak
+lb	ltz	Luxembourgeois
+lch	lch	Luchazi
+lg	lug	Luganda
+lgg	lgg	Lugbara
+lia	lia	Limba
+li	nld	Limburgish
+lij	lij	Tabarkin
+lld	lld	Ladin
+llh	lld	Ladin Badiot
+llj	lld	Ladin Fascian
+llr	lld	Ladin Gherdeina
+lmo	lmo	Lombard
+lms	lms	Limousin
+lnc	lnc	Languedocien
+ln	lin	Lingala
+lns	lns	Lamnso'
+lo	lao	Lao
+lol	lol	Mongo-Nkundu
+loz	loz	Lozi
+lt	lit	Lithuanian
+lua	lua	Luba-Kasai
+lue	lue	Luvale
+lu	lub	Luba-Katanga
+lun	lun	Lunda
+luo	luo	Luo
+lus	lus	Lushai
+lv	lav	Latvian
+mad	mad	Madura
+mam	mam	Mam
+mau	mau	Mazateco
+maz	maz	Mazahua
+mcd	mcd	Sharanahua
+mcf	mcf	Matsés
+mdf	mdf	Moksha
+men	men	Mende
+meu	meu	Motu
+mfe	mfe	Morisyen
+mg	plt	Malagasy
+mh	mah	Marshallese
+mhi	mhi	Madi
+mho	mho	Mashi
+mic	mic	Micmac
+mi	mri	Maori
+min	min	Minangkabau
+miq	miq	Mískito
+mir	mir	Mixe
+mk	mkd	Macedonian
+ml	mal	Malayalam
+mlu	mlu	To'abaita
+mn	khk	Mongolian
+mo	ron	Moldavian
+mos	mos	Mooré
+mr	mar	Marathi
+mrj	mrj	High Mari
+ms	mly	Malay
+mt	mlt	Maltese
+mua	mua	Mundang
+mus	mus	Muskogee
+mwv	mwv	Mentawai
+mxv	mxv	Mixteco
+my	mya	Myanmar
+myv	myv	Erzua
+mzn	mzn	Mazanderani
+na	nau	Nauruan
+nah	nhe	Náhuatl
+nap	nap	Napoletano-Calabrese
+naq	naq	Nama
+nba	nba	Nyemba
+nb	nob	Norwegian Bokmaal
+ndc	ndc	Ndau
+nd	nde	Ndebele
+nds	nds	Low Saxon
+ne	nep	Nepali
+nen	nen	Nengone
+ng	ndo	Ndonga
+ngl	ngl	Lomwe
+nia	nia	Nias
+niu	niu	Niue
+nl	nld	Dutch
+nmf	nmf	Tangkhul Naga
+nnb	nnb	Nandi
+nn	nno	Norwegian Nynorsk
+not	not	Nomatsiguenga
+nr	nbl	Ndebele
+nso	nso	Northern Sotho
+nv	nav	Navajo
+ny	nya	Nyanja
+nyk	nyk	Nyaneka
+nym	nym	Nyamwezi
+nyn	nyn	Nyankore
+nzi	nzi	Nzema
+ogo	ogo	Khana
+oj	ojw	Ojibwa
+om	gaz	Oromo
+ood	ood	O'odham
+or	ori	Oriya
+os	oss	Osetin
+pa	pan	Panjabi
+pag	pag	Pangasinan
+pam	pam	Pampangan
+pap	pap	Papiamentu
+pau	pau	Palauan
+pbb	pbb	Páez
+pcm	pcm	Nigerian Pidgin
+pdc	pdc	Pennsylvania German
+pem	pem	Phende
+pih	pih	Pitcairn
+pis	pis	Pijin
+pl	pol	Polish
+pms	pms	Piemontese
+pon	pon	Pohnpeian
+ppl	ppl	Pipil
+prq	prq	Ashéninca Perené
+prs	prs	Dari
+prv	prv	Provençal
+ps	pbu	Pashto
+ptb	por	Portuguese (Brazil)
+pt	por	Portuguese (Portugal)
+qu	quh	Quechua
+qug	qug	Quichua
+rar	rar	Rarotongan
+rcf	rcf	Réunion Creole
+rm	roh	Romansch Sursilvan
+rnd	rnd	Ruund
+rn	run	Rundi
+ro	ron	Romanian
+rom	rmn	Romani
+ru	rus	Russian
+rug	rug	Roviana
+rup	rup	Macedo Romanian
+rw	kin	Kinyarwanda
+sba	sba	Ngambay
+sc	src	Sardinian
+scn	scn	Sicilian
+sco	sco	Scots
+sd	snd	Sindhi
+se	sme	Northern Saami
+seh	seh	Sena
+sg	sag	Sango
+shp	shp	Shipibo-Conibo
+shs	shs	Shuswap
+sid	sid	Sidamo
+sk	slk	Slovak
+sl	slv	Slovenian
+sm	smo	Samoan
+sn	sna	Shona
+snk	snk	Soninke
+so	som	Somali
+son	ses	Songhay
+sop	sop	Songe
+sq	als	Albanian
+srd	srp	Serbian Cyrillic
+sr	srp	Serbian Latin
+srm	srm	Saramaccan
+srn	srn	Sranan
+srr	srr	Serer-Sine
+ss	ssw	Swati
+st	sot	Southern Sotho
+su	sun	Sunda
+suk	suk	Sukuma
+sum	sum	Sumo-Mayangna
+sus	sus	Susu
+sv	swe	Swedish
+swb	swb	Comorian
+sw	swh	Swahili
+tab	tab	Tabassaran
+ta	tam	Tamil
+tbz	tbz	Ditammari
+te	tel	Telugu
+tem	tem	Themne
+teo	teo	Teso
+tet	tet	Tetun
+tg	tgk	Tajiki
+th	tha	Thai
+ti	tir	Tigrigna
+tig	tig	Tigré
+tiv	tiv	Tiv
+tk	tuk	Turkmen
+tkl	tkl	Tokelauan
+tl	tgl	Tagalog
+tll	tll	Tetela
+tn	tsn	Setswana
+tob	tob	Toba
+to	ton	Tongan
+toi	toi	Tonga
+toj	toj	Tojolabal
+tos	tos	Totonaca
+tpi	tpi	Tok Pisin
+tr	tur	Turkish
+tsc	tsc	Tshwa
+ts	tso	Tsonga
+tt	tat	Tatar
+ttj	ttj	Tooro
+tum	tum	Tumbuka
+tvl	tvl	Tuvaluan
+ty	tah	Tahitian
+tzc	tzc	Tzotzil
+tzm	tzm	Tamazight
+udm	udm	Udmurt
+ug	uig	Uyghur
+uk	ukr	Ukrainian
+umb	umb	Umbundu
+ura	ura	Urarina
+ur	urd	Urdu
+urh	urh	Urhobo
+uz	uzn	Uzbek
+val	cat	Valencian
+vec	vec	Venetian
+ve	ven	Venda
+vi	vie	Vietnamese
+vls	vls	Vlaams
+vmf	vmf	Mainfränkisch
+vmw	vmw	Makhuwa
+wa	fra	Walloon
+wal	wal	Wolaytta
+war	war	Waray-Waray
+wls	wls	Wallisian
+wo	wol	Wolof
+xal	xal	Kalmyk-Oirat
+xh	xho	Xhosa
+xsm	xsm	Kasem
+yad	yad	Yagua
+yaf	yaf	Yaka
+yao	yao	Yao
+yap	yap	Yapese
+yi	ydd	Yiddish
+yo	yor	Yoruba
+yua	yua	Yucatán Maya
+za	ccx	Zhuang
+zap	zai	Zapoteco, Istmo
+zea	zea	Zeeuws
+zh	cmn	Mandarin Chinese (Pinyin)
+znd	zne	Zande
+zpa	zpa	Lachiguiri Zapotec
+zu	zul	Zulu

@@ -1,0 +1,40 @@
+Need R, nloptr, rpy2, gensim, 24 GB Mem, 8 cores.
+
+1. move the following files into Data/
+    - kaggle-stats-blogs-YYYYMMDD-YYYYMMDD.json
+    - kaggle-stats-users-YYYYMMDD-YYYYMMDD.json
+    - testPosts.json
+    - trainPosts.json
+    - trainUsers.json
+
+    There must be no other files. The dates embedded in the kaggle stats must be accurate and in the format
+    given in the first data release.
+
+Fitting the model
+
+2. run date_ranges.py in Tools/MakeMyData
+3. run make_MyData in Tools/MakeMyData
+4. run make_mytrainUsers in Tools/MakeMyData
+5. run blog_prob.py in Tools/BlogProbDist (a few mins)
+6. run standing_queries.py in Tools/StandingQueries (a few mins)
+7. run make_test_index_dict.py in Tools/TestIndexDict (a few mins)
+8. run title_analyzer.py in Tools/Titles (14 mins)
+9. run tag_analyzer.py in Tools/Tags (14 mins)
+10. run category_analyzer.py in Tools/Categories (11 mins)
+11. run content_analyzer.py in Tools/Content (11 hours)
+12. run feature_generator.py in GenerateFeatures/ (2.5 hours)
+13. run R_optimize.py in Optimize/ (1.5 hrs)
+
+
+Making the submission
+
+1. run sub_blog_prob.py in Tools/BlogProbDist (a few mins)
+2. run sub_standing_queries.py in Tools/StandingQueries (a few mins)
+3. run sub_make_test_index_dict.py in Tools/TestIndexDict (a few mins)
+4. run sub_title_analyzer.py in Tools/Titles (15 mins)
+5. run sub_tag_analyzer.py in Tools/Tags (15 mins)
+6. run sub_category_analyzer.py in Tools/Categories (12 mins)
+7. run sub_content_analyzer.py in Tools/Content (14 hours)
+8. run linear_model.py in LinearModel/ (4.5 hours)
+
+
