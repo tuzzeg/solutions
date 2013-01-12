@@ -17,7 +17,7 @@ As you can see, the first two were crucial for the high scoring!
 You can find a quite exaustive description of the method in this paper:
 
 > F. Aiolli, A Preliminary Study on a Recommender System for the Million Songs Dataset Challenge Preference Learning: Problems and Applications in AI (PL-12), ECAI-12 Workshop, Montpellier
-> [[http://www.ke.tu-darmstadt.de/events/PL-12/papers/08-aiolli.pdf](pdf)]
+> [[pdf](http://www.ke.tu-darmstadt.de/events/PL-12/papers/08-aiolli.pdf)]
 
 also available at my [web page](http://www.math.unipd.it/~aiolli/paperi.html)
 
