@@ -1,0 +1,49 @@
+#Cut the .csv header
+tail -n 2365436 train.csv > train.txt
+tail -n 452167 test.csv > test.txt
+
+#Sample train.txt into a dataset for base-classifier (dry_train.txt) and ensemble development (comb_dev.txt) portions
+python fast_sample_corpus.py train.txt 0.01 comb_dev.txt dry_train.txt
+
+#Sample base-classifier portion further into training and parameter optimization sets, using different folds
+#Folds 0-2 are sampled from the full dry_train.txt
+#Folds 3-5 each use 1/3 of dry_train.txt, randomly sampled
+#Folds 6-9 each use 1/4 of dry_train.txt, sampled in sequential order blocks 
+python nfold_sample_corpus.py dry_train.txt 5 5000 dry_train.txt dry_dev.txt
+for SUBSET in 0 1 2 3 4
+do
+	mkdir wikip_large_$SUBSET
+	mv dry_dev.txt_$SUBSET wikip_large_$SUBSET/dry_dev.txt
+	mv dry_train.txt_$SUBSET wikip_large_$SUBSET/dry_train.txt_0
+	python shuffle_data.py wikip_large_$SUBSET/dry_train.txt_0 > wikip_large_$SUBSET/dry_train.txt
+done
+mv wikip_large_4/ wikip_large_6/
+mv wikip_large_3/dry_train.txt wikip_large_3/dry_train.txt_1
+mkdir wikip_large_4/
+mkdir wikip_large_5/
+python fast_sample_corpus.py wikip_large_3/dry_train.txt_1 0.33 wikip_large_3/dry_train.txt wikip_large_4/dry_train.txt_1
+python fast_sample_corpus.py wikip_large_4/dry_train.txt_1 0.5 wikip_large_4/dry_train.txt wikip_large_5/dry_train.txt
+cp wikip_large_3/dry_dev.txt wikip_large_4/dry_dev.txt
+cp wikip_large_3/dry_dev.txt wikip_large_5/dry_dev.txt
+mkdir wikip_large_7/
+mkdir wikip_large_8/
+mkdir wikip_large_9/
+mv wikip_large_6/dry_train.txt_0 wikip_large_6/dry_train.txt_1
+tail -n 1755586 wikip_large_6/dry_train.txt_1 > wikip_large_7/dry_train.txt_1
+head -585196 wikip_large_6/dry_train.txt_1 > wikip_large_6/dry_train.txt_2
+tail -n 1170391 wikip_large_7/dry_train.txt_1 > wikip_large_8/dry_train.txt_1
+head -n 585195 wikip_large_7/dry_train.txt_1 > wikip_large_7/dry_train.txt_2
+tail -n 585195 wikip_large_8/dry_train.txt_1 > wikip_large_9/dry_train.txt_2
+head -n 585196 wikip_large_8/dry_train.txt_1 > wikip_large_8/dry_train.txt_2
+for SUBSET in 6 7 8 9
+do
+	python shuffle_data.py wikip_large_$SUBSET/dry_train.txt_2 > wikip_large_$SUBSET/dry_train.txt
+done
+cp wikip_large_6/dry_dev.txt wikip_large_7/dry_dev.txt
+cp wikip_large_6/dry_dev.txt wikip_large_8/dry_dev.txt
+cp wikip_large_6/dry_dev.txt wikip_large_9/dry_dev.txt
+
+#Count labelset statistics for use as label prior features in ensemble combination
+python count_labelsets2.py dry_train.txt > labelset_count_table.txt
+#Extract labelsets for ensemble combination reference results
+cat comb_dev.txt | sed s'/[0-9]*:[0-9]*.*//' > comb_dev_reference.txt

@@ -1,0 +1,14 @@
+rm -r results
+mkdir comb_dev_results
+mkdir eval_results
+
+for TEMPLATE in results_40x8_mnb_mafs_s2_lp_u_jm4_bm20ti_mc0_pct0_ps2_thr16
+
+do
+	zcat $TEMPLATE/*/*\_params.txt_39_0.gz | sed s'/dry_dev.txt/\/research\/antti\/multi_label\/comb_dev.txt/' > comb_dev_results/$TEMPLATE\_params_comb_dev.txt
+	python Metaopt2.py comb_dev_results/$TEMPLATE\_params_comb_dev.txt
+	grep "Res:" comb_dev_results/$TEMPLATE\_params_comb_dev.txt_0_0_0.log | sed s'/.*\[//' | sed s'/[ ,]*-1.*//' > comb_dev_results/$TEMPLATE.results
+	zcat $TEMPLATE/*/*\_params.txt_39_0.gz | sed s'/dry_dev.txt/\/research\/antti\/multi_label\/test.txt/' > eval_results/$TEMPLATE\_params_eval.txt
+	python Metaopt2.py eval_results/$TEMPLATE\_params_eval.txt
+	grep "Res:" eval_results/$TEMPLATE\_params_eval.txt_0_0_0.log | sed s'/.*\[//' | sed s'/[ ,]*-1.*//' > eval_results/$TEMPLATE.results
+done

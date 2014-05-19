@@ -1,0 +1,23 @@
+rm -r results
+FOLD=0
+ZIP_FILE=t$FOLD.zip
+rm $ZIP_FILE
+
+for TEMPLATE in mnb_mafs_s0_lp_u_jm2_bm18tic_fb3_mc0_pct0_ps6_thr16
+
+do
+	OUTPUT_DIR=results_40x8_$TEMPLATE
+	rm -r $OUTPUT_DIR
+	for VARIABLE in wikip_large_$FOLD
+	do 
+	   echo $OUTPUT_DIR, $VARIABLE
+	   cat templates/$TEMPLATE.template | sed s"/r8/$VARIABLE/" | sed s'/nfold.*/nfold 1/' | sed s"/single_/multi_/" | sed s"/java -Xmx2000M/\/usr\/bin\/java -Xmx15600M/" | sed s"/cond_hashsize 10000000/cond_hashsize 100000000/" | sed s'/max_procs.*/max_procs 1'/ > $VARIABLE/$VARIABLE\_params.txt
+	   rm -r $VARIABLE/$VARIABLE\_params.txt_*
+	   python Metaopt2.py $VARIABLE/$VARIABLE\_params.txt 40 1 8
+	   cat $VARIABLE/$VARIABLE\_params.txt_39_0 | sed s'/_dev/_eval/' | sed s'/nfold.*/nfold 1/' > $VARIABLE/$VARIABLE\_params_eval.txt
+	done
+	mkdir -p $OUTPUT_DIR/wikip_large_$FOLD
+	cp wikip_large_$FOLD/*params*.txt* $OUTPUT_DIR/wikip_large_$FOLD/
+        gzip -r $OUTPUT_DIR
+        zip -r $ZIP_FILE $OUTPUT_DIR
+done

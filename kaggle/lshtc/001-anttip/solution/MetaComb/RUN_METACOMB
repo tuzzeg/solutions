@@ -1,0 +1,43 @@
+#Transposes base-classifier result files, performs prediction of documents per label on transposed files, then transposes the .results2 files back to document-per-line format. Changing MetaComb2.java global variables can be used for development of the ensemble code and development set n-fold crossvalidation.
+
+#Transpose comb_dev files
+if [ "1" == "1" ]; then
+   mkdir comb_dev_results2
+   cd comb_dev_results/
+   for FILE in *.results
+   do
+	echo $FILE
+ 	python ../TransposeFile.py $FILE 445729 > ../comb_dev_results2/$FILE
+# 	python ../TransposeFile.py $FILE 445730 > ../comb_dev_results2/$FILE 
+   done
+   cd ..
+  #Make the transposed reference file, select the labels that occur in comb_dev.txt
+   python TransposeFile.py comb_dev_reference.txt 445729 > comb_dev_reference2.txt
+#   python TransposeFile.py comb_dev_reference.txt 445730 > comb_dev_reference2.txt
+   mkdir comb_dev_results3
+   python SelectDevLabels.py 
+fi
+#Transpose eval files
+if [ "1" == "1" ]; then
+   mkdir eval_results2
+   cd eval_results/
+   for FILE in *.results
+   do
+   	echo $FILE	
+ 	python ../TransposeFile.py $FILE 445729 > ../eval_results2/$FILE
+# 	python ../TransposeFile.py $FILE 445730 > ../eval_results2/$FILE
+   done
+   cd ..
+fi
+#Classify
+if [ "1" == "1" ]; then
+   /usr/bin/javac MetaComb2.java -cp .:*
+   /usr/bin/java -Xmx15600M -cp .:* MetaComb2 1 10 11 18 26 28 29 31 44 45 46 48
+fi
+#Transpose eval file back
+if [ "1" == "1" ]; then
+   python TransposeFile.py eval_results2.txt 452167 > eval_results.txt
+   python res2csv.py eval_results.txt > results.csv
+fi
+
+#NOTE: Tiny bug, final submission used 445729 as the number of rows for label-per-line format, should be 445730, from 0 to 445729. Fixing to 445730 changes only a single document assignment in the test set results 

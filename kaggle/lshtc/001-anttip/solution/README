@@ -1,0 +1,9 @@
+Kaggle LSHTC Competition Winner Documentation
+1 May 2014
+Antti Puurula, Jesse Read, Albert Bifet
+
+Read the description document LSHTC4.pdf for more details.
+
+For optimizing base-classifiers, compile SGM_Tests.java with javac, use Make_templates.py or copy an existing template, and run RUN_DEVS. 
+For classifying the comb_dev.txt and test.txt results with a base-classifier, configure and run RUN_EVALS. 
+For combining the base-classifier results with the ensemble, run RUN_METACOMB. The global variables in each script can be modified to change configurations.
